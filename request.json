@@ -1,0 +1,10 @@
+{
+  "room_name": "me-he",
+  "audio_track_id": "TR_AMEkb5kh9pf4Ra",
+  "video_track_id": "TR_VCWkouHqFoCAun",
+  "stream": {
+    "urls": [
+      "rtmp://a.rtmp.youtube.com/live2/52ah-1jja-k4mb-7716-8hhp"
+    ]
+  }
+}

@@ -1,0 +1,15 @@
+version: "3"
+services:
+  livekit:
+    image: livekit/livekit-server
+    command: --config livekit.yaml
+    depends_on:
+      - redis
+    ports:
+      - "7880:7880"
+    restart: always
+  redis:
+    image: redis
+    ports:
+      - "6379:6379"
+    restart: always
