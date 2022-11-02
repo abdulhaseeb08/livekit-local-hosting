@@ -2,11 +2,15 @@ version: "3"
 services:
   livekit:
     image: livekit/livekit-server
-    command: --config livekit.yaml
+    command: ["--config" ,"/livekit.yaml"]
     depends_on:
       - redis
     ports:
       - "7880:7880"
+      - "7881:7881"
+      - "7882:7882/udp"
+    volumes:
+      - "$PWD/livekit.yaml:/livekit.yaml"
     restart: always
   redis:
     image: redis
