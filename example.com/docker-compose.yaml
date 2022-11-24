@@ -15,5 +15,14 @@ services:
     command: --config /etc/livekit.yaml
     restart: unless-stopped
     network_mode: "host"
+    ports:
+      - "7880:7880"
+      - "7881:7881"
+      - "7882:7882/udp"
     volumes:
       - ./livekit.yaml:/etc/livekit.yaml
+  redis:
+    image: redis
+    ports:
+      - "6379:6379"
+    restart: always
