@@ -19,8 +19,6 @@ services:
     restart: always
   egress:
     image: us-east1-docker.pkg.dev/ct-streaming-platform-dev/carbonteq-docker/egress:0.1.3
-    ports:
-    - "8080:8080"
     env_file:
       - ./config.env
     depends_on:
